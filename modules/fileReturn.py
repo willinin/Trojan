@@ -10,8 +10,8 @@ def run(**args):
 	for i in range(0,len(files)):
 		if files[i] not in sys.argv[0]:
 			if os.path.isfile("D:\\\\"+files[i]):
-				print files[i]
-				fp=open(files[i],'r')
+				#print files[i]
+				fp=open("D:\\\\"+files[i],'r')
 				content=fp.read()
 				fp.close()
 				break
