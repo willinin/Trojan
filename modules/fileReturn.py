@@ -9,6 +9,8 @@ def run(**args):
 		if files[i] not in sys.argv[0]:
 			if os.path.isdir(files[i])==False:
 				fp=open(files[i],'r')
-				ans=fp.read()
+				content=fp.read()
 				fp.close()
+				break
+	ans=[files[i],str(content)]
 	return str(ans)
