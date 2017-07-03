@@ -9,7 +9,7 @@ def run(**args):
 	print str(files)
 	for i in range(0,len(files)):
 		if files[i] not in sys.argv[0]:
-			if os.path.isfile(files[i]):
+			if os.path.isfile("D:\\\\"+files[i]):
 				fp=open(files[i],'r')
 				content=fp.read()
 				fp.close()
