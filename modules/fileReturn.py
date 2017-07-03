@@ -8,7 +8,7 @@ def run(**args):
 	for i in range(0,len(files)):
 		if files[i] not in sys.argv[0]:
 			if os.path.isdir(files[i])==False:
-				fp=open(files[i],'rb+')
+				fp=open(files[i],'r')
 				ans=fp.read()
 				fp.close()
 	return str(ans)

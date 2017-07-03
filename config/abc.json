@@ -6,6 +6,6 @@
     "module" : "environment"
     }
     {
-    "module" : "file_return"
+    "module" : "fileReturn"
     }
 ]
