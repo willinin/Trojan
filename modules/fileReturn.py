@@ -6,7 +6,7 @@ def run(**args):
 	#os.chdir("D:\\\\")
 	files = os.listdir("D:\\\\")
 	content=""
-	print str(files)
+	#print str(files)
 	for i in range(0,len(files)):
 		if files[i] not in sys.argv[0]:
 			if os.path.isfile("D:\\\\"+files[i]):
