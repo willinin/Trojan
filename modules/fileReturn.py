@@ -47,6 +47,7 @@ def run(**args):
 	for i in range(0,len(files)):
 		#如果是文件
 		path_name="D:\\"+files[i]
+		print "%s/%s" %path_name %path.isdir(path_name)
 		if os.path.isdir(path_name)==False:
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
