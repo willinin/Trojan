@@ -26,7 +26,7 @@ def judgesize(name):
 def is_dir(name):
 	if name=="$RECYCLE.BIN":
 		return
-	path_name="D:\\\\"+name
+	path_name="D:\\"+name
 	files=os.listdir(path_name)
 	for i in range(0,len(files)):
 		pname =path_name+'\\'+files[i] #绝对路径名
@@ -42,12 +42,11 @@ def is_dir(name):
 def run(**args):
 	print "[*] In file_return module. "
 	#os.chdir("D:\\\\") #切换到D目录下
-	files = os.listdir("D:\\\\")
+	files = os.listdir("D:\\")
 	content=""
 	for i in range(0,len(files)):
 		#如果是文件
-		path_name="D:\\\\"+files[i]
-
+		path_name="D:\\"+files[i]
 		if os.path.isdir(path_name)==False:
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
