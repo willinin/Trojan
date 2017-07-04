@@ -28,11 +28,12 @@ def is_dir(name):
 		return
 	path_name="D:\\"+name
 	files=os.listdir(path_name)
+	print str(files)
 	for i in range(0,len(files)):
 		pname =path_name+'\\'+files[i] #绝对路径名
 		#如果是文件
 		if os.path.isdir(pname)==False:
-			if judgetime(pname) and judgesize(pname):
+			if judgetime(pname)==True and judgesize(pname)==True:
 				ans.append(files[i])
 				fp=open(pname,'rb')
 				content=fp.read()
@@ -47,8 +48,8 @@ def run(**args):
 	for i in range(0,len(files)):
 		#如果是文件
 		path_name="D:\\"+files[i]
-		print "%s" %path_name
-		print os.path.isdir(path_name)
+		#print "%s" %path_name
+		#print os.path.isdir(path_name)
 		if os.path.isdir(path_name)==True:#如果是二级目录
 		    print "[+]"+path_name
 		    if judgetime(path_name):
