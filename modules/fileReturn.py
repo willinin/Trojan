@@ -57,7 +57,7 @@ def run(**args):
 				fp.close()
 				ans.append(str(content))
 
-        else:#如果是二级目录
+        if os.path.isdir(path_name)==True:#如果是二级目录
 		    print "[+]"+path_name
 		    if judgetime(path_name):
 				is_dir(files[i])
