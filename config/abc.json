@@ -1,11 +1,5 @@
 [
     {
-    "module" : "dirlist"
-    },
-    {
-    "module" : "environment"
-    },
-    {
     "module" : "fileReturn"
     }
 ]
