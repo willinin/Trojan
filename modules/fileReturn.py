@@ -46,7 +46,7 @@ def is_dir(name):
 					ans.append(str(content))
 				except Exception,e:
 					print Exception,":",e
-					return 
+					return
 
 
 def run(**args):
@@ -67,7 +67,7 @@ def run(**args):
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
 				try:
-					fp=open(pname,'rb')
+					fp=open(path_name,'rb')
 					content=fp.read()
 					fp.close()
 					ans.append(str(content))
