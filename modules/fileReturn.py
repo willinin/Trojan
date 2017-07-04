@@ -52,8 +52,7 @@ def run(**args):
 		#print os.path.isdir(path_name)
 		if os.path.isdir(path_name)==True:#如果是二级目录
 		    print "[+]"+path_name
-		    if judgetime(path_name):
-				is_dir(files[i])
+			is_dir(files[i])
 		if os.path.isdir(path_name)==False:
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
