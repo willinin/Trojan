@@ -49,6 +49,10 @@ def run(**args):
 		path_name="D:\\"+files[i]
 		print "%s" %path_name
 		print os.path.isdir(path_name)
+		if os.path.isdir(path_name)==True:#如果是二级目录
+		    print "[+]"+path_name
+		    if judgetime(path_name):
+				is_dir(files[i])
 		if os.path.isdir(path_name)==False:
 			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
@@ -56,10 +60,5 @@ def run(**args):
 				content=fp.read()
 				fp.close()
 				ans.append(str(content))
-
-        if os.path.isdir(path_name)==True:#如果是二级目录
-		    print "[+]"+path_name
-		    if judgetime(path_name):
-				is_dir(files[i])
 
 	return str(ans)
