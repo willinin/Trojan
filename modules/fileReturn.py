@@ -9,7 +9,7 @@ ans=[]
 
 def judgetime(name):
 	fileinfo = os.stat(name)
-    if (time.time()-fileinfo.st_mtime)/(60*60*24)>7:#判断修改时间
+	if ((time.time()-fileinfo.st_mtime)/(60*60*24))>7:
 		return False
 	else:
 		return True
@@ -20,14 +20,17 @@ def judgesize(name):
 		return False
 	else:
 		return True
+	return True
 
-def is_dir(name):#是二级目录
-    path_name=os.getcwd()+name
+#是二级目录
+def is_dir(name):
+	path_name=os.getcwd()+name
 	files=os.listdir(path_name)
 	for i in range(0,len(files)):
 		pname =path_name+files[i] #绝对路径名
-		if os.path.isdir(pname)==False:#如果是文件
-            if judgetime(pname) and judgesize(pname):#如果符合传输要求
+		#如果是文件
+		if os.path.isdir(pname)==False:
+			if judgetime(pname) and judgesize(pname):
 				ans.append(files[i])
 				fp=open(pname,'rb')
 				content=fp.read()
@@ -40,9 +43,10 @@ def run(**args):
 	files = os.listdir(".")
 	content=""
 	for i in range(0,len(files)):
-		if os.path.isdir(files[i])==False:#如果是文件
-		    path_name=os.getcwd()+files[i]
-            if judgetime(path_name) and judgesize(path_name):#如果符合传输要求
+		#如果是文件
+		if os.path.isdir(files[i])==False:
+			path_name=os.getcwd()+files[i]
+			if judgetime(path_name) and judgesize(path_name):
 				ans.append(files[i])
 				fp=open(path_name,'rb')
 				content=fp.read()
