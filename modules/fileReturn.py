@@ -24,6 +24,8 @@ def judgesize(name):
 
 #是二级目录
 def is_dir(name):
+	if name=="$RECYCLE.BIN":
+		return 
 	path_name="D:\\\\"+name
 	files=os.listdir(path_name)
 	for i in range(0,len(files)):
