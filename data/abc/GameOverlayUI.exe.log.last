@@ -1,0 +1,15 @@
+Sat Jul 01 02:06:44 2017 UTC - GameOverlay process started: pid: 12392
+Sat Jul 01 02:06:44 2017 UTC - GameOverlay process connecting to: pid: 20632
+Sat Jul 01 02:06:44 2017 UTC - BuildID: 1496897923
+Sat Jul 01 02:06:44 2017 UTC - Steam Path: E:\steam
+周六 7月 01 02:06:44 2017 UTC - SetScreenSize( 1914, 1001 )
+周六 7月 01 02:06:44 2017 UTC - Changing resolutions from (1536, 864) -> (1914, 1001)
+周六 7月 01 02:06:48 2017 UTC - Generating new string page texture 2737: 256x256, total string texture memory is 262.14 KB
+周六 7月 01 02:06:48 2017 UTC - Generating new string page texture 2738: 128x256, total string texture memory is 393.22 KB
+周六 7月 01 03:44:26 2017 UTC - Generating new string page texture 2740: 64x256, total string texture memory is 458.75 KB
+周六 7月 01 03:44:28 2017 UTC - Generating new string page texture 2741: 48x256, total string texture memory is 507.90 KB
+周六 7月 01 05:18:45 2017 UTC - SetScreenSize( 1914, 991 )
+周六 7月 01 05:18:45 2017 UTC - Changing resolutions from (1914, 1001) -> (1914, 991)
+周六 7月 01 07:13:55 2017 UTC - Generating new string page texture 2744: 8x256, total string texture memory is 516.10 KB
+周六 7月 01 15:23:09 2017 UTC - Game Exit Event signaled.
+周六 7月 01 15:23:09 2017 UTC - Shutting down overlay
