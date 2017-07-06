@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 71 d5 19 d0 93 95 78-f0 bd 16 9a e2 0c 2b b2</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">Windows 7.vmx</vmxPathName></VM><tools-install-info><installError>0</installError><updateCounter>3</updateCounter></tools-install-info></Foundry>
