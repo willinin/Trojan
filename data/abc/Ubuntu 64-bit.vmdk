@@ -1,0 +1,43 @@
+# Disk DescriptorFile
+version=1
+encoding="GBK"
+CID=d89b8f31
+parentCID=ffffffff
+isNativeSnapshot="no"
+createType="twoGbMaxExtentSparse"
+
+# Extent description
+RW 4192256 SPARSE "Ubuntu 64-bit-s001.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s002.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s003.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s004.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s005.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s006.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s007.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s008.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s009.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s010.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s011.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s012.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s013.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s014.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s015.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s016.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s017.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s018.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s019.vmdk"
+RW 4192256 SPARSE "Ubuntu 64-bit-s020.vmdk"
+RW 40960 SPARSE "Ubuntu 64-bit-s021.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "5221"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "bbe79792615af38558dc4f12d89b8f31"
+ddb.toolsInstallType = "2"
+ddb.toolsVersion = "9280"
+ddb.uuid = "60 00 C2 9d e0 1b 49 f1-fe 67 bd 4d 8d 33 db 82"
+ddb.virtualHWVersion = "9"
